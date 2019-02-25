@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body{
+  height: 100%;
+}
+
+.box {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #2e2e2e;
+}
+
+.fallback {
+  background-color: #000001;
+}
+
+.fallback img {
+  max-height: 100%;
+  max-width: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.box-desc{
+  color: #acacae;
+  position: absolute;
+  left: 50%;
+  bottom: 18%;
+  line-height: 2;
+  word-break: keep-all;
+  transform: translate(-50%);
+}
+
+.box-img{
+  position: absolute;
+  max-width: 80%;
+  max-height: 90%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.box-btn {
+  position: absolute;
+  cursor: pointer;
+  background-color: #4CAF50;
+  left: 50%;
+  top: 50%;
+  color: #fff;
+  padding: 2% 6%;
+  font-size: 1.8rem;
+  border-radius: 1rem;
+  transform: translate(-50%, -50%);
+}
+.box-btn i{
+  display: block;
+  font-style: normal;
+}
+
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.animated.infinite {
+  animation-iteration-count: infinite;
+}
+
+@keyframes heartBeat {
+  0% {
+    transform: scale(1);
+  }
+
+  14% {
+    transform: scale(1.1);
+  }
+
+  28% {
+    transform: scale(1);
+  }
+
+  42% {
+    transform: scale(1.1);
+  }
+
+  70% {
+    transform: scale(1);
+  }
+}
+
+.heartBeat {
+  animation-name: heartBeat;
+  animation-duration: 1.3s;
+  animation-timing-function: ease-in-out;
+}
+

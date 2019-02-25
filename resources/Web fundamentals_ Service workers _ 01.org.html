@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<!-- saved from url=(0168)https://webcache.googleusercontent.com/search?q=cache:6uW6pNu5jEIJ:https://01.org/chromium/blogs/eero/2016/web-fundamentals-service-workers+&cd=4&hl=zh-CN&ct=clnk&gl=hk -->
+<html xmlns:og="http://ogp.me/ns#" xmlns:article="http://ogp.me/ns/article#" xmlns:book="http://ogp.me/ns/book#" xmlns:profile="http://ogp.me/ns/profile#" xmlns:video="http://ogp.me/ns/video#" xmlns:product="http://ogp.me/ns/product#" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/terms/" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:sioc="http://rdfs.org/sioc/ns#" xmlns:sioct="http://rdfs.org/sioc/types#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" class="js browser-Chrome"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script type="text/javascript" src="./Web fundamentals_ Service workers _ 01.org_files/p.js" async=""></script><script src="./Web fundamentals_ Service workers _ 01.org_files/sdk.js" async=""></script><!--<base href="https://01.org/chromium/blogs/eero/2016/web-fundamentals-service-workers">--><base href="."><style>body{margin-left:0;margin-right:0;margin-top:0}#bN015htcoyT__google-cache-hdr{background:#f5f5f5;font:13px arial,sans-serif;text-align:left;color:#202020;border:0;margin:0;border-bottom:1px solid #cecece;line-height:16px;padding:16px 28px 24px 28px}#bN015htcoyT__google-cache-hdr *{display:inline;font:inherit;text-align:inherit;color:inherit;line-height:inherit;background:none;border:0;margin:0;padding:0;letter-spacing:0}#bN015htcoyT__google-cache-hdr a{text-decoration:none;color:#1a0dab}#bN015htcoyT__google-cache-hdr a:hover{text-decoration:underline}#bN015htcoyT__google-cache-hdr a:visited{color:#609}#bN015htcoyT__google-cache-hdr div{display:block;margin-top:4px}#bN015htcoyT__google-cache-hdr b{font-weight:bold;display:inline-block;direction:ltr}</style><link rel="stylesheet" type="text/css" href="./Web fundamentals_ Service workers _ 01.org_files/buttons-secure.css"><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_dialog_advanced{border-radius:8px;padding:10px}.fb_dialog_content{background:#fff;color:#373737}.fb_dialog_close_icon{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{left:5px;right:auto;top:5px}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{height:100%;left:0;margin:0;overflow:visible;position:absolute;top:-10000px;transform:none;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{background:none;height:auto;min-height:initial;min-width:initial;width:auto}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{clear:both;color:#fff;display:block;font-size:18px;padding-top:20px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .4);bottom:0;left:0;min-height:100%;position:absolute;right:0;top:0;width:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_mobile .fb_dialog_iframe{position:sticky;top:0}.fb_dialog_content .dialog_header{background:linear-gradient(from(#738aba), to(#2c4987));border-bottom:1px solid;border-color:#1d3c78;box-shadow:white 0 1px 1px -1px inset;color:#fff;font:bold 14px Helvetica, sans-serif;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:linear-gradient(from(#4267B2), to(#2a4887));background-clip:padding-box;border:1px solid #29487d;border-radius:3px;display:inline-block;line-height:18px;margin-top:3px;max-width:85px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{background:none;border:none;color:#fff;font:bold 12px Helvetica, sans-serif;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #4a4a4a;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f5f6f7;border:1px solid #4a4a4a;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-position:50% 50%;background-repeat:no-repeat;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}</style><iframe id="stSegmentFrame" name="stSegmentFrame" frameborder="0" scrolling="no" width="0px" height="0px" sandbox="allow-scripts allow-same-origin" style="display:none;" src="./Web fundamentals_ Service workers _ 01.org_files/saved_resource.html"></iframe></head><body class="html not-front not-logged-in no-sidebars page-community page-community-news-events secondary-nav section-projects og-context og-context-node og-context-node-1561 i18n-en jsLoaded-processed"><div id="bN015htcoyT__google-cache-hdr"><div><span>这是 Google 对 <a href="https://01.org/chromium/blogs/eero/2016/web-fundamentals-service-workers">https://01.org/chromium/blogs/eero/2016/web-fundamentals-service-workers</a> 的缓存。</span>&nbsp;<span>这是该网页在 2019年2月9日 19:59:57 GMT 的快照。</span>&nbsp;<span><a href="https://01.org/chromium/blogs/eero/2016/web-fundamentals-service-workers">当前页</a>在此期间可能已经更改。</span>&nbsp;<a href="http://support.google.com/websearch/bin/answer.py?hl=zh-CN&amp;p=cached&amp;answer=1687222"><span>了解详情</span>.</a></div><div><span style="display:inline-block;margin-top:8px;margin-right:104px;white-space:nowrap"><span style="margin-right:28px"><span style="font-weight:bold">完整版本</span></span><span style="margin-right:28px"><a href="http://webcache.googleusercontent.com/search?q=cache:6uW6pNu5jEIJ:https://01.org/chromium/blogs/eero/2016/web-fundamentals-service-workers&amp;hl=zh-CN&amp;gl=hk&amp;strip=1&amp;vwsrc=0"><span>纯文字版本</span></a></span><span style="margin-right:28px"><a href="http://webcache.googleusercontent.com/search?q=cache:6uW6pNu5jEIJ:https://01.org/chromium/blogs/eero/2016/web-fundamentals-service-workers&amp;hl=zh-CN&amp;gl=hk&amp;strip=0&amp;vwsrc=1"><span>查看源代码</span></a></span></span></div><span style="display:inline-block;margin-top:8px;color:#717171"><span>提示：要在此页面上快速找到您的搜索字词，请按 <b>Ctrl+F</b> 或者 <b>⌘-F</b>（Mac），然后使用查找栏搜索。</span></span></div><div style="position:relative;">
+<!--[if IEMobile 7]><html class="iem7" ><![endif]-->
+<!--[if lte IE 6]><html class="ie6 ie6-7 ie6-8" ><![endif]-->
+<!--[if (IE 7)&(!IEMobile)]><html class="ie7 ie6-7 ie6-8" ><![endif]-->
+<!--[if IE 8]><html class="ie8 ie6-8" ><![endif]-->
+<!--[if (gte IE 9)|(gt IEMobile 7)]><!--><!--<![endif]-->
+
+
+  
+<link rel="alternate" hreflang="zh-hans" href="https://01.org/zh/chromium/blogs/eero/2016/web-fundamentals-service-workers">
+<link rel="shortcut icon" href="https://01.org/sites/all/themes/custom/otcorg_summer_theme/favicon.ico" type="image/vnd.microsoft.icon">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<script src="./Web fundamentals_ Service workers _ 01.org_files/gtm.js" type="text/javascript" async=""></script><script async="" src="./Web fundamentals_ Service workers _ 01.org_files/analytics.js"></script><script type="text/javascript" id="async-buttons" src="./Web fundamentals_ Service workers _ 01.org_files/async-buttons.js"></script><script src="./Web fundamentals_ Service workers _ 01.org_files/font.js" type="text/javascript">
+</script><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+<script src="./Web fundamentals_ Service workers _ 01.org_files/menu.min.js" type="text/javascript">
+</script><link rel="alternate" hreflang="en" href="https://01.org/chromium/blogs/eero/2016/web-fundamentals-service-workers">
+<meta property="twitter:image" content="https://01.org/sites/all/themes/custom/otcorg_summer_theme/chromium.jpg">
+<meta property="twitter:card" content="summary">
+<meta property="og:image" content="https://01.org/sites/all/themes/custom/otcorg_summer_theme/chromium.jpg">
+<meta name="generator" content="Drupal 7 (http://drupal.org)">
+<link rel="image_src" href="https://01.org/sites/default/files/chromium.jpg">
+<link rel="shortlink" href="https://01.org/node/4633">
+<meta property="og:site_name" content="01.org">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://01.org/chromium/blogs/eero/2016/web-fundamentals-service-workers">
+<meta property="og:title" content="Web fundamentals: Service workers">
+<meta property="og:description" content="Introduction Traditionally web applications have been able to function only when they are open in a tab within a browser that has a working network connection. This has placed web applications at a disadvantage compared to native applications. Native applications can use locally installed resources to retain partial or even full functionality even offline. Native applications also can use background execution contexts, and can thus also function even when their main user interface view isn’t open. Service workers and related browsers features have recently begun to reduce the disadvantages web applications face by allowing browsers to share some of their native application capabilities with web applications in a controlled manner. A service worker is a browser concept that provides an event-driven background execution context for a web origin and a scope. As such service workers constitute one of the core components for Progressive Web Apps. A service worker can intercept events related to web pages within its origin and scope. These events include fetch events generated by page navigation and subresource requests (this allows the service worker to act as a programmable proxy), message events generated by the postMessage interface (this allows direct communication between a web page and the service worker which controls the web page), and sync events generated by delayed background synchronization. Uses cases for service workers include: Resource prefetching Selective and unconditional response caching Fallback responses Mock responses for testing Background data synchronization Load balancing Offline analytics Service workers are a powerful feature, and therefore there are some security measures in place to prevent them from being abused. First, services workers are available only in secure contexts. Basically pages using service workers must be served via HTTPS. Second, service workers are origin bound and thus must be served from the same origin as the pages that use them. Therefore, we can’t use content delivery networks (CDNs) for service workers directly. However, service workers can import scripts, and the imported scripts can be from other origins, including CDNs. There are occasionally requests to lift that limitation, but doing so would turn temporary cross-site scripting vulnerabilities into permanent vulnerabilities because service workers can act as proxies. Finally, the scopes of service workers are limited. By default, a service worker at /app1/sw.js for its origin can only control web pages and intercept subresources under /app1/ but not under /app2/. It is always possible to narrow the scope down whereas conversely, the scope can only be widened if the web server supplies a relevant Service-Worker-Allowed header field. Slightly simplified service worker lifecycle Service workers must be registered before they can have any effect. The service worker runs once it’s successfully registered to allow it to add event listeners. The service worker then reaches an installing state, where the service worker can handle an install lifecycle event. Once the event is handled and all the extend lifetime promises set by the event handler resolve, the service worker becomes installed. When a previous service worker (if any) is terminated and made redundant, the current service worker reaches an activating state, where the service worker can handle an activate lifecycle event. Once the event is handled and all the extend lifetime promises set by the event handler resolve, the service worker becomes activated. Once activated, the service worker can begin to handle functional events such as fetch events. A service worker can be terminated at any time when it is not handling an event or if an event handler exceeds the imposed time limits. On the other hand, the service worker will restart if an event arrives while the service worker is terminated. This cycle can happen multiple times per second. This ensures that service workers do not consume too many resources and that the restart cycle is top-of-mind for developers. On the other hand, it also means that service workers do not have a persistent global state, so service workers should utilize data ste, such as IndexedDB, to hold a persistent state instead of using global variables. Service worker registration There are three methods you can use to register service workers: Service worker registration using a service worker JavaScript API: if (&#39;serviceWorker&#39; in navigator) { navigator.serviceWorker.register(&#39;/app1/sw.js&#39;, {scope: &#39;/app1/&#39;}) .then(function (registration) { console.log(&#39;Service worker registration succeeded with scope &#39; + registration.scope); }) .catch(function (error) { console.log(&#39;Service worker registration failed: &#39; + error); }); } Service worker registration using a link element:   Service worker registration using a Link header field in server response: Link: rel=&quot;serviceworker&quot;; scope=&quot;/app1/&quot; The registration promise in the JavaScript API resolves once the service worker is successfully registered. If the service worker is already registered, the promise resolves instantly. That means that it is both safe and preferable to register a service worker on each and every page load. Service worker installation A service worker can add a listener for an install lifecycle event. self.addEventListener(&#39;install&#39;, event =&gt; { // ... });,/pre&gt; It is safe to use new JavaScript features such as arrow functions in service worker scripts because all browsers that support service workers support those new JavaScript features as well. The event handler is called while the service worker is at the installing state, during which a previous service worker might still be activated. Therefore, the install lifecycle event handler should only perform nondestructive initialization steps, such as cache population, to avoid disturbing the currently activated service worker. The initialization steps are often asynchronous, so usually the service worker is not fully initialized when the install lifecycle event handler returns. The event handler can extend the lifetime of the event using the waitUntil method of the event to add a new extend lifetime promises to the event to prevent the service worker from reaching the installed state until all those promises resolve. By default, the service worker remains at the installed state while a previous service worker is still in use due to having clients. However, it is possible to ignore the existing clients, terminate the previous service worker, and advance activation by calling the skipWaiting method of the service worker while the install lifecycle event is being processed. Service worker activation A service worker also can add a listener for an activate lifecycle event. self.addEventListener(&#39;activate&#39;, event =&gt; { // ... }); The event handler is called while the service worker is at the activating state, during which all previous service workers are already terminated and are made redundant or are about to be made redundant. Therefore, the activate lifecycle event handler can do also destructive initialization steps, such as database schema updates and cache purges. Once again, to prevent the service worker from reaching the activated state too early, the event handler can extend the lifetime of the event using the waitUntil method of the event to add a new promise to the extend lifetime promises of event and hence delay the activated state until all those promises resolve. The activated service worker does not control all existing clients and receive functional events by default, but only after navigation or reload. However, it is possible to force the activated service worker to take control of all existing clients instantly by calling the clients.claim method of the service worker while the activate lifecycle event is being processed. Functional and message events Once a service worker is activated, it is ready to receive function events (such as fetch, foreignfetch, and sync events) and message events. The fetch and foreignfetch events are generated by page navigation and subresource requests and allow the service worker to act as a programmable proxy. The message events are generated by the postMessage interface and allow direct communication between a web page and its controlling service worker. Only the fetch, foreignfetch, and message events are defined in the service worker specification. However, as functional events provide a useful framework to build on, other specifications define other functional events. For instance, the background synchronization specification defines the sync events which are used for delayed background synchronization. A service worker as a programmable proxy When a service worker is used as programmable proxy, the main duty of the install lifecycle event handler is to populate a cache with core resources. const CACHE_VERSION = &#39;v2&#39;; self.addEventListener(&#39;install&#39;, event =&gt; { // Prefetching. event.waitUntil( // Open a cache for resources. caches.open(CACHE_VERSION) .then(cache =&gt; {  // Begin fetching the resources.  // The returned promise resolve only when all  // of them are fetched and cached.  return cache.addAll([  &#39;/app1/index.html&#39;,  &#39;/app1/resources/v2/background.png&#39;,  &#39;/app1/resources/v2/fallback.png&#39;,  &#39;/app1/resources/v2/script.js&#39;,  &#39;/app1/resources/v2/style.css&#39;  ]); }) .then(() =&gt; {  // Optional. Now that all previous tasks are  // done, advance to activation immediately.  return self.skipWaiting(); }); ); }); The main duty of the activate lifecycle event handler is to purge old cached resources that are not being used any more. It is important to do this because otherwise at some point the browser will determine that the origin is using too much cache resources and will purge the entire cache. By purging the cache early, the service worker can do selective purging. self.addEventListener(&#39;activate&#39;, event =&gt; { event.waitUntil( // Purge old cache versions. caches.keys() .then(keys =&gt; Promise.all(keys.map(key =&gt; {  if (key != CACHE_VERSION)  return caches.delete(key); }))) .then(() =&gt; {  // Optional. Now that all previous tasks are  // done, take control of all existing clients.  return self.clients.claim(); }); ); }); The fetch event handler does the proxying. The example code does unconditional caching and falls back to fetching from a server first and then to a fallback response. self.addEventListener(&#39;fetch&#39;, event =&gt; { // Unconditional caching. event.respondWith( caches.match(event.request).then(function(response) { return response || fetch(event.request)  .then(response =&gt; {  // Open a cache for resources.  caches.open(CACHE_VERSION).then(cache =&gt; {  // Cache the response.  cache.put(event.request, response);  });  // Return the response.  return response.clone();  })  .catch(() =&gt; {  // Return a fallback response.  return caches.match(&#39;/app1/resources/v2/fallback.png&#39;);  }); ); ); }); This kind of prefetching and unconditional caching can be implemented using a cache manifest. However, the power of fetch events lies with programmability. The event handler can examine the properties of requests (such as the URL and the request and response header fields) and act differently in the case of different request types. For example, the service worker could prefer cached responses and fall back to fetched ones for some requests, prefer fetched responses and fall back to cached ones for some other requests, and use load balancing for yet other requests. Issues with proxying service workers and possible solutions Service workers may utilize local caches, which can make repeated resource loadings much faster. However, the same does not usually hold when caches are cold during initially load resources. There are actually two issues here. One issue is that because code evaluation takes time, programmability inevitably causes a delay. One solution flying around to solve this problem is using static routes, which allows service workers to declare that certain resource requests are always handled in the same simple way. It might be possible to cover the most common cases with just a few chained models. This would allow service workers to use declarative routes for most resources and to use fetch event handlers only for the most complex resource requests. However, because this issue hasn’t been extensively studied and we believe this issue is usually fairly minor, this solution has not been worked on. The other issue is caused by the fact that fetch event queue handling is not parallelized although (properly) implemented fetch event handlers are asynchronous. A typical web browser uses multiple connections and threads to fetch network resources. However, with service workers, a single service worker acts as the gatekeeper for these fetches and can become a bottleneck. The solution we’re discussing to solve this problem, is to have fetch events be handled in multiple threads in parallel. This discussion is ongoing, but we will likely implement this solution in the near future. Summary Service workers have bought the set of execution contexts available to web applications closer to those of native applications. Service workers have allowed web applications to locally run part of their functionality that has traditionally been able to run only on remote servers. This has narrowed the feature and performance gap between web and native applications. However, more complementary standards are needed before web and native applications become indistinguishable. Service workers are essential for Progressive Web Apps. Service workers provide connectivity independence by allowing apps to work offline and to handle errors caused by low quality networks. They ensure freshness of apps by allowing apps to use service worker update process and they contribute to discoverability of apps along Web App Manifest, too.">
+<meta property="og:updated_time" content="2016-11-29T10:43:46-08:00">
+<meta property="og:image" content="https://01.org/sites/default/files/chromium.jpg">
+<meta property="article:published_time" content="2016-11-28T13:48:28-08:00">
+<meta property="article:modified_time" content="2016-11-29T10:43:46-08:00">
+  <title>Web fundamentals: Service workers | 01.org</title>
+
+    <meta http-equiv="cleartype" content="on">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <link rel="canonical" href="https://01.org/chromium/blogs/eero/2016/web-fundamentals-service-workers">
+  <link type="text/css" rel="stylesheet" href="./Web fundamentals_ Service workers _ 01.org_files/css_xE-rWrJf-fncB6ztZfd2huxqgxu4WO-qwma6Xer30m4.css" media="all">
+<link type="text/css" rel="stylesheet" href="./Web fundamentals_ Service workers _ 01.org_files/css_XXoIiKpyZOIJwrmGIDu25QElBPu3QheCCdeUBzA5N18.css" media="all">
+<link type="text/css" rel="stylesheet" href="./Web fundamentals_ Service workers _ 01.org_files/css_b_cuVVknN9wM3mPlPOmdZ83VTZ_Sf6GlZtuTy-ubofg.css" media="all">
+<link type="text/css" rel="stylesheet" href="./Web fundamentals_ Service workers _ 01.org_files/css_KsZYNlPfDHB-xPpM646hJD1cdojb8GwfZwTqbHuvXJU.css" media="all">
+<link type="text/css" rel="stylesheet" href="./Web fundamentals_ Service workers _ 01.org_files/css_lyBvx1f7TmDLnR81KR5B1eOtrTKJheGmNWuNpDts7Hk.css" media="all">
+<link type="text/css" rel="stylesheet" href="./Web fundamentals_ Service workers _ 01.org_files/css_5aQvY9eDN5XIiayMtb_05FejVu1px73z0dS0wFjNJKo.css" media="all">
+  <script type="text/javascript" src="./Web fundamentals_ Service workers _ 01.org_files/js_oTw2mccdSyi5Mu_UeNjwZZ2nsxd4cA8KM0jkogZEw68.js"></script>
+<script type="text/javascript" src="./Web fundamentals_ Service workers _ 01.org_files/js_1bBkNj0bqlM_uypyLefyFTTln-qE-97wSQi-EPFjiU4.js"></script>
+<script type="text/javascript" src="./Web fundamentals_ Service workers _ 01.org_files/js_uvgUomgWRDecmOPO_7f75pcoYGSMgROXSc-zcnF9t5Y.js"></script>
+<script type="text/javascript" src="./Web fundamentals_ Service workers _ 01.org_files/js_b9cr6mbcGs0Moz5voismE2CFpjp2d5guyaiRjoJWmnQ.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+      // close script tag for SecKit protection
+      //--><!]]>
+      </script>
+      <script type="text/javascript" src="./Web fundamentals_ Service workers _ 01.org_files/seckit.document_write.js"></script><!--
+      <link type="text/css" rel="stylesheet" id="seckit-clickjacking-no-body" media="all" href="/sites/all/modules/contrib/seckit/css/seckit.no_body.css" />
+      <!-- stop SecKit protection -->
+      <noscript>
+      <link type="text/css" rel="stylesheet" id="seckit-clickjacking-noscript-tag" media="all" href="/sites/all/modules/contrib/seckit/css/seckit.noscript_tag.css" />
+      <div id="seckit-noscript-tag">
+        <h1>Sorry, you need to enable JavaScript to visit this website.</h1>
+      </div>
+      </noscript>
+      <script type="text/javascript">
+      <!--//--><![CDATA[//><!--
+      // open script tag to avoid syntax errors
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+var switchTo5x = true;
+//--><!]]>
+</script>
+<script type="text/javascript" src="./Web fundamentals_ Service workers _ 01.org_files/buttons.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+if (stLight !== undefined) { stLight.options({"publisher":"dr-42089df0-992e-a2c0-1b1c-33cef1194fca","version":"5x"}); }
+//--><!]]>
+</script>
+<script type="text/javascript" src="./Web fundamentals_ Service workers _ 01.org_files/js_mH_PLR5dlUYwcS7Sy5xdIjkvuGV0YLVb23yWPw7CC-4.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","//www.google-analytics.com/analytics.js","ga");ga("create", "UA-8768382-7", {"cookieDomain":".01.org"});ga("send", "pageview");
+//--><!]]>
+</script>
+<script type="text/javascript" src="./Web fundamentals_ Service workers _ 01.org_files/js_-y68VTtMEvq7AtojBBdy_-abye3E6PQxNzpRzmyMWPs.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"otcorg_summer_theme","theme_token":"HMuFIDAhk6kn213soVRgPwa3IO-K4WRu7usLQ8d9SRU","jquery_version":"1.7","js":{"sites\/all\/modules\/contrib\/jquery_update\/replace\/jquery\/1.7\/jquery.min.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/libraries\/prettify\/prettify.js":1,"sites\/all\/libraries\/prettify\/lang-css.js":1,"sites\/all\/libraries\/prettify\/lang-lisp.js":1,"sites\/all\/libraries\/prettify\/lang-ml.js":1,"sites\/all\/libraries\/prettify\/lang-sql.js":1,"sites\/all\/modules\/contrib\/waypoints\/waypoints.min.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/external\/jquery.cookie.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/misc\/jquery.form.min.js":1,"misc\/form.js":1,"misc\/ajax.js":1,"sites\/all\/modules\/contrib\/jquery_update\/js\/jquery_update.js":1,"sites\/all\/modules\/contrib\/comment_notify\/comment_notify.js":1,"sites\/all\/modules\/contrib\/extlink\/extlink.js":1,"sites\/all\/libraries\/colorbox\/jquery.colorbox-min.js":1,"sites\/all\/modules\/contrib\/colorbox\/js\/colorbox.js":1,"sites\/all\/modules\/contrib\/colorbox\/styles\/default\/colorbox_style.js":1,"sites\/all\/modules\/contrib\/prettify\/prettify.loader.js":1,"0":1,"1":1,"https:\/\/ws.sharethis.com\/button\/buttons.js":1,"2":1,"sites\/all\/modules\/features\/otcorg_projects\/js\/jquery.nestedAccordion.js":1,"sites\/all\/modules\/features\/otcorg_projects\/js\/menu.js":1,"misc\/textarea.js":1,"misc\/progress.js":1,"sites\/all\/modules\/contrib\/webform\/js\/webform.js":1,"sites\/all\/modules\/features\/otc_webforms\/js\/popover.effect.js":1,"sites\/all\/modules\/contrib\/google_analytics\/googleanalytics.js":1,"3":1,"sites\/all\/themes\/custom\/otcorg_summer_theme\/js\/vendor\/jquery.easing.1.3.js":1,"sites\/all\/themes\/custom\/otcorg_summer_theme\/js\/vendor\/materialize.js":1,"sites\/all\/themes\/custom\/otcorg_summer_theme\/js\/vendor\/velocity.min.js":1,"sites\/all\/themes\/custom\/otcorg_summer_theme\/js\/vendor\/dropdown.js":1,"sites\/all\/themes\/custom\/otcorg_summer_theme\/js\/vendor\/forms.js":1,"sites\/all\/themes\/custom\/otcorg_summer_theme\/js\/vendor\/scrollspy.js":1,"sites\/all\/themes\/custom\/otcorg_summer_theme\/js\/vendor\/slick.min.js":1,"sites\/all\/themes\/custom\/otcorg_summer_theme\/js\/main.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"sites\/all\/modules\/contrib\/comment_notify\/comment_notify.css":1,"modules\/aggregator\/aggregator.css":1,"modules\/book\/book.css":1,"modules\/comment\/comment.css":1,"sites\/all\/modules\/contrib\/date\/date_api\/date.css":1,"sites\/all\/modules\/contrib\/date\/date_popup\/themes\/datepicker.1.7.css":1,"modules\/field\/theme\/field.css":1,"sites\/all\/modules\/contrib\/mollom\/mollom.css":1,"modules\/node\/node.css":1,"sites\/all\/modules\/features\/otc_webapps\/otcorg_webapps.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/contrib\/video_filter\/video_filter.css":1,"sites\/all\/modules\/contrib\/extlink\/extlink.css":1,"modules\/forum\/forum.css":1,"sites\/all\/modules\/contrib\/views\/css\/views.css":1,"sites\/all\/modules\/contrib\/colorbox\/styles\/default\/colorbox_style.css":1,"sites\/all\/modules\/contrib\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/contrib\/panels\/css\/panels.css":1,"sites\/all\/modules\/contrib\/rate\/rate.css":1,"sites\/all\/modules\/contrib\/webform\/css\/webform.css":1,"sites\/all\/libraries\/fontawesome\/css\/font-awesome.css":1,"sites\/all\/themes\/custom\/otcorg_summer_theme\/css\/main.css":1,"sites\/all\/themes\/custom\/otcorg_new_theme\/css\/node-project.css":1,"sites\/all\/modules\/contrib\/prettify\/styles\/stackoverflow.css":1}},"colorbox":{"opacity":"0.85","current":"{current} of {total}","previous":"\u00ab Prev","next":"Next \u00bb","close":"Close","maxWidth":"98%","maxHeight":"98%","fixed":true,"mobiledetect":true,"mobiledevicewidth":"480px"},"prettify":{"linenums":false,"match":".content","nocode":"no-code","custom":[],"markup":{"code":true,"pre":true,"precode":false}},"ajax":{"edit-webform-ajax-submit-5984":{"callback":"webform_ajax_callback","wrapper":"webform-ajax-wrapper-5984","progress":{"message":"","type":"throbber"},"event":"click","url":"\/system\/ajax","submit":{"_triggering_element_name":"op","_triggering_element_value":"Submit"}}},"urlIsAjaxTrusted":{"\/system\/ajax":true,"\/chromium\/blogs\/eero\/2016\/web-fundamentals-service-workers":true},"extlink":{"extTarget":"_blank","extClass":"ext","extLabel":"(link is external)","extImgClass":0,"extSubdomains":1,"extExclude":"","extInclude":"","extCssExclude":"header, footer, .project-header-actions,.slider-item-actions,.highlight-button,h1, h2, h3, h4, h5, h6","extCssExplicit":"main","extAlert":0,"extAlertText":"This link will take you to an external web site.","mailtoClass":0,"mailtoLabel":"(link sends e-mail)"},"googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls|xml|z|zip|bz2|rpm|deb|pptx|asc","trackColorbox":1,"trackDomainMode":"1"},"currentPath":"node\/4633","currentPathIsAdmin":false,"better_exposed_filters":{"views":{"projects":{"displays":{"block_top_projects_submenu":{"filters":[]},"block_project_categories":{"filters":[]}}}}},"ogContext":{"groupType":"node","gid":"1561"}});
+//--><!]]>
+</script>
+  
+
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-TSR2CX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script type="text/javascript">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0];var j=d.createElement(s);var dl=l!='dataLayer'?'&l='+l:'';j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;j.type='text/javascript';j.async=true;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TSR2CX');</script>
+<!-- End Google Tag Manager -->
+      <div class="st-container">
+  <div id="o-wrapper" class="o-wrapper">
+    <!-- HEADER -->
+    
+    <!-- END HEADER -->
+
+    <div id="floating-menus">
+                </div>
+
+            <div class="region region-feedback" style="bottom: -519px;">
+    <div id="block-webform-client-block-5984" class="block block-webform">
+
+    <h2>Feedback</h2>
+  
+  <div class="content">
+    <div id="webform-ajax-wrapper-5984"><form class="webform-client-form webform-client-form-5984" action="https://01.org/chromium/blogs/eero/2016/web-fundamentals-service-workers" method="post" id="webform-client-form-5984" accept-charset="UTF-8"><div><fieldset class="webform-component-fieldset webform-component--description form-wrapper"><div class="fieldset-wrapper"><div class="fieldset-description">Your feedback is important to keep improving our website and offer you a more reliable experience.</div></div></fieldset>
+<div class="form-item webform-component webform-component-textfield webform-component--full-name webform-container-inline">
+  <label for="edit-submitted-full-name">Full name </label>
+ <input type="text" id="edit-submitted-full-name" name="submitted[full_name]" value="" size="60" maxlength="128" class="form-text">
+</div>
+<div class="form-item webform-component webform-component-email webform-component--email webform-container-inline">
+  <label for="edit-submitted-email">Email </label>
+ <input class="email form-text form-email" type="email" id="edit-submitted-email" name="submitted[email]" size="60">
+</div>
+<div class="form-item webform-component webform-component-radios webform-component--type webform-container-inline">
+  <label for="edit-submitted-type">Type <span class="form-required" title="This field is required.">*</span></label>
+ <div id="edit-submitted-type" class="form-radios"><div class="form-item form-type-radio form-item-submitted-type">
+ <input required="required" type="radio" id="edit-submitted-type-1" name="submitted[type]" value="site" class="form-radio">  <label class="option" for="edit-submitted-type-1">Site </label>
+
+</div>
+<div class="form-item form-type-radio form-item-submitted-type">
+ <input required="required" type="radio" id="edit-submitted-type-2" name="submitted[type]" value="content" class="form-radio">  <label class="option" for="edit-submitted-type-2">Content </label>
+
+</div>
+<div class="form-item form-type-radio form-item-submitted-type">
+ <input required="required" type="radio" id="edit-submitted-type-3" name="submitted[type]" value="project" class="form-radio">  <label class="option" for="edit-submitted-type-3">Project </label>
+
+</div>
+</div>
+</div>
+<div class="form-item webform-component webform-component-node-reference webform-component--project">
+  <label for="edit-submitted-project">Project </label>
+ <select id="edit-submitted-project" name="submitted[project]" class="form-select"><option value="" selected="selected">None</option><option value="27715">Access Network Dataplanes</option><option value="3840">Android Intent Fuzzing Module for Drozer</option><option value="3471">android-iio-sensors-hal</option><option value="2291">Assistive Context-Aware Toolkit (ACAT)</option><option value="2450">Automated Flashing and Testing</option><option value="233">Automotive Message Broker</option><option value="2957">Basic Audio Tester</option><option value="2342">Bay Trail Audio for HDMI*</option><option value="404">Beignet</option><option value="1674">BlueZ</option><option value="1673">BlueZ for Android</option><option value="15153">C for Media Development Package</option><option value="4725">Cache Monitoring Technology</option><option value="2241">CaVEMan Intel</option><option value="25782">Celadon</option><option value="1561">Chromium</option><option value="1613">Clear Linux* Project for Intel® Architecture</option><option value="263">Clear Sans</option><option value="216">Cloudeebus</option><option value="18330">CloudWPA</option><option value="6169">Compute Library for Deep Neural Networks (clDNN)</option><option value="16660">compute-runtime</option><option value="37">ConnMan</option><option value="93">Cordova</option><option value="546">CPClient</option><option value="804">Crosswalk Project</option><option value="4117">Data Analytics Acceleration Library</option><option value="4724">Data Plane Development Kit (DPDK)</option><option value="526">dLeyna</option><option value="6175">Drivers for the Terasic DE10-Nano kit </option><option value="13826">Embedded Linux Library (ELL)</option><option value="67">Enterprise Security Infrastructure Project</option><option value="4592">EPID-SDK</option><option value="3468">ezIOmeter</option><option value="4072">Fast UI Draw</option><option value="2211">FIO Visualizer</option><option value="560">fMBT</option><option value="4661">FPGA Partial Reconfiguration</option><option value="1604">GNOME</option><option value="990">GraphBuilder</option><option value="230">gSSO</option><option value="38">GUPnP</option><option value="6174">Hardware Design for the Terasic DE10-Nano kit </option><option value="3794">Hetero Streams Library</option><option value="3655">Hyperscan</option><option value="4149">IIO Testing Framework</option><option value="4638">Intel Education Content Hub</option><option value="14183">Intel GPU Compute Samples</option><option value="2318">Intel Kernel Guard Technology </option><option value="27229">Intel Media For Linux</option><option value="3966">Intel NVM CIM Library</option><option value="3963">Intel NVM CLI Library </option><option value="7778">Intel NVM Frameworks</option><option value="4042">Intel NVM i18N Library</option><option value="9648">Intel Open Source Security Incident Response Team</option><option value="8628">Intel Quantum Simulator</option><option value="4685">Intel Resource Director Technology (RDT) in Linux</option><option value="1329">Intel® Data Plane Performance Demonstrators</option><option value="2288">Intel® Deep Learning Framework</option><option value="503">Intel® Dynamic Platform and Thermal Framework (DPTF) for Chromium OS</option><option value="43">Intel® Graphics for Linux*</option><option value="2230">Intel® Graphics Virtualization Technology (Intel® GVT)</option><option value="702">Intel® Node Manager Reference Kit</option><option value="4726">Intel® Open Network Platform (Intel ONP)</option><option value="4721">Intel® QuickAssist Technology</option><option value="4562">Intel® Rack Scale Design Reference Software</option><option value="5788">Intel® Software Guard Extensions SDK for Linux*</option><option value="416">Intel® Storage Acceleration Library (Open Source Version)</option><option value="4377">Intel® Threading Building Blocks</option><option value="1668">Intel® Video and Audio for Linux*</option><option value="4093">Intel® Web Engineering &amp; Development</option><option value="68">Intel® Wireless for Linux*</option><option value="3527">IoT Device Management Services</option><option value="1651">Iris Panel</option><option value="3849">IXPDIMM SW</option><option value="157">jWebAudio</option><option value="47">KVM</option><option value="2913">Languages Performance</option><option value="590">libdmclient</option><option value="3977">Linux Kernel Performance</option><option value="1817">Linux* I/O Profiler (ioprof)</option><option value="70">Linux* Kernel</option><option value="601">Linux* NFC</option><option value="158">Linux* Thermal Daemon</option><option value="1304">Linux* UEFI Validation</option><option value="178">Linux*-ACPI</option><option value="316">Lustre* software</option><option value="225">Mayloon</option><option value="294">memhack</option><option value="6172">Meta Layer for the Terasic DE10-Nano kit </option><option value="4217">MKL-DNN</option><option value="8725">Model For Predicting Rapid Response Events</option><option value="4565">MPXCheck</option><option value="3970">mraa</option><option value="295">msr-tools</option><option value="628">Murphy</option><option value="151">NumaTOP</option><option value="40">oFono</option><option value="8314">OPAE</option><option value="7595">Open Cloud Integrity Technology (Open CIT)</option><option value="140">Open Community Runtime</option><option value="30106">Open Media Streamer (OMS)</option><option value="3862">Open Network Insight</option><option value="366">OpenAttestation</option><option value="48">OpenStack* on Intel® Architecture</option><option value="27723">OpenVINO™ toolkit</option><option value="222">Packet Processing</option><option value="693">Parameter Framework</option><option value="2244">Performance Portal for Ceph</option><option value="219">pm-graph</option><option value="12831">Power Stress and Shaping Tool</option><option value="642">PowerTOP</option><option value="659">Provman</option><option value="3956">Python Wrapper for Intel Galileo</option><option value="8721">Qt</option><option value="668">Rapid Interface Builder</option><option value="1496">RAPL Power Meter</option><option value="270">Rig</option><option value="4348">Robotics &amp; Autonomous Systems</option><option value="4332">RocketBoards.org</option><option value="29460">RSP SW Toolkit</option><option value="4533">Safestring Library</option><option value="29922">Scalable Video Technology</option><option value="6327">Simple Autonomous Wheeled Robot</option><option value="335">Simple Performance Tools</option><option value="4459">Supplemental Reset Components for Qsys</option><option value="41">SyncEvolution</option><option value="2325">Test Report Center (TRC)</option><option value="2276">Thunderbolt software</option><option value="3988">Time Series Data Visualization</option><option value="2991">TinyCrypt</option><option value="73">Tizen</option><option value="684">Tizen Web Simulator</option><option value="3697">Trusted Analytics Platform (TAP)</option><option value="14177">Trusty-IA</option><option value="715">Verbalucce</option><option value="1938">Virtual Storage Manager</option><option value="92">Wayland</option><option value="6173">Web Content for the Terasic DE10-Nano kit </option><option value="2186">Wireless Display Software for Linux OS (WDS)</option><option value="1625">Workflow Profiler</option><option value="3524">XBB</option><option value="50">Xen</option><option value="17452">XOM-switch</option><option value="4013">YASK</option><option value="3606">Yocto BSP for Apollo Lake-I</option><option value="458">Yocto Project</option><option value="3788">Yoko tool</option></select>
+</div>
+<div class="form-item webform-component webform-component-textarea webform-component--comments">
+  <label for="edit-submitted-comments">Comments <span class="form-required" title="This field is required.">*</span></label>
+ <div class="form-textarea-wrapper resizable textarea-processed resizable-textarea"><textarea required="required" id="edit-submitted-comments" name="submitted[comments]" cols="60" rows="5" class="form-textarea required"></textarea><div class="grippie"></div></div>
+</div>
+<input type="hidden" name="details[sid]">
+<input type="hidden" name="details[page_num]" value="1">
+<input type="hidden" name="details[page_count]" value="1">
+<input type="hidden" name="details[finished]" value="0">
+<input type="hidden" name="form_build_id" value="form-mHJDCYP8xAIK3WNUYVZycPBWw_cUS6PxkQyFej4Ab5I">
+<input type="hidden" name="form_id" value="webform_client_form_5984">
+<input type="hidden" name="webform_ajax_wrapper_id" value="webform-ajax-wrapper-5984">
+<div class="form-actions"><input class="webform-submit button-primary form-submit ajax-processed" id="edit-webform-ajax-submit-5984" type="submit" name="op" value="Submit"></div></div></form></div>  </div>
+</div>
+  </div>
+    
+    <!-- MAIN -->
+    <main class="o-content no-sidebars">
+      <div class="o-container">
+        <!-- Render about page if exists -->
+                <!-- End about page -->
+                                                
+                    <div id="main-content" class="project-og-menu-fixed">
+                          
+                        <div class="container">
+                                                                <div class="region region-content">
+    <div id="block-system-main" class="block block-system">
+
+    
+  <div class="content">
+    
+  <div class="field field-name-title-field field-type-text field-label-hidden"><div class="field-items"><div class="field-item even"><h1>Web fundamentals: Service workers</h1>
+</div></div></div>  <div class="post-details">
+   BY <a href="https://01.org/users/eero" title="View user profile." class="username ext" xml:lang="" about="/users/eero" typeof="sioc:UserAccount" property="foaf:name" datatype="" target="_blank">Eero Häkkinen<span class="ext"><span class="element-invisible"> (link is external)</span></span></a>   ON Nov 28, 2016  </div>
+  <div class="sharethis-buttons"><div class="sharethis-wrapper"><span st_url="https://01.org/chromium/blogs/eero/2016/web-fundamentals-service-workers" st_title="Web fundamentals: Service workers" class="st_facebook_custom" displaytext="facebook" st_processed="yes"></span>
+<span st_url="https://01.org/chromium/blogs/eero/2016/web-fundamentals-service-workers" st_title="Web fundamentals: Service workers" class="st_twitter_custom" displaytext="twitter" st_processed="yes"></span>
+</div></div>
+  <div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><h2>Introduction</h2>
+
+<p>Traditionally web applications have been able to function only when they are open in a tab within a browser that has a working network connection. This has placed web applications at a disadvantage compared to native applications. Native applications can use locally installed resources to retain partial or even full functionality even offline. Native applications also can use background execution contexts, and can thus also function even when their main user interface view isn’t open. Service workers and related browsers features have recently begun to reduce the disadvantages web applications face by allowing browsers to share some of their native application capabilities with web applications in a controlled manner.</p>
+
+<p>A service worker is a browser concept that provides an event-driven background execution context for a web origin and a scope. As such service workers constitute one of the core components for Progressive Web Apps. A service worker can intercept events related to web pages within its origin and scope. These events include <em>fetch</em> events generated by page navigation and subresource requests (this allows the service worker to act as a programmable proxy), <em>message</em> events generated by the <em>postMessage</em> interface (this allows direct communication between a web page and the service worker which controls the web page), and <em>sync</em> events generated by delayed background synchronization.</p>
+
+<p>Uses cases for service workers include:</p>
+
+<ul><li>Resource prefetching</li>
+    <li>Selective and unconditional response caching</li>
+    <li>Fallback responses</li>
+    <li>Mock responses for testing</li>
+    <li>Background data synchronization</li>
+    <li>Load balancing</li>
+    <li>Offline analytics</li>
+</ul><p>Service workers are a powerful feature, and therefore there are some security measures in place to prevent them from being abused. First, services workers are available only in secure contexts. Basically pages using service workers must be served via HTTPS.</p>
+
+<p>Second, service workers are origin bound and thus must be served from the same origin as the pages that use them. Therefore, we can’t use content delivery networks (CDNs) for service workers directly. However, service workers can import scripts, and the imported scripts can be from other origins, including CDNs. There are occasionally requests to lift that limitation, but doing so would turn temporary cross-site scripting vulnerabilities into permanent vulnerabilities because service workers can act as proxies.</p>
+
+<p>Finally, the scopes of service workers are limited. By default, a service worker at <em>/app1/sw.js</em> for its origin can only control web pages and intercept subresources under <em>/app1/</em> but not under <em>/app2/</em>. It is always possible to narrow the scope down whereas conversely, the scope can only be widened if the web server supplies a relevant <em>Service-Worker-Allowed</em> header field.</p>
+
+<p><img alt="" src="./Web fundamentals_ Service workers _ 01.org_files/serviceworkers1015115.png" style="width:973px; height:751px" width="973" height="751"></p>
+
+<h3><em>Slightly simplified service worker lifecycle</em></h3>
+
+<p>Service workers must be registered before they can have any effect. The service worker runs once it’s successfully registered to allow it to add event listeners.</p>
+
+<p>The service worker then reaches an <em>installing</em> state, where the service worker can handle an <em>install</em> lifecycle event. Once the event is handled and all the extend lifetime promises set by the event handler resolve, the service worker becomes <em>installed</em>.</p>
+
+<p>When a previous service worker (if any) is terminated and made <em>redundant</em>, the current service worker reaches an <em>activating</em> state, where the service worker can handle an <em>activate</em> lifecycle event. Once the event is handled and all the extend lifetime promises set by the event handler resolve, the service worker becomes <em>activated</em>. Once activated, the service worker can begin to handle functional events such as <em>fetch</em> events.</p>
+
+<p>A service worker can be terminated at any time when it is not handling an event or if an event handler exceeds the imposed time limits. On the other hand, the service worker will restart if an event arrives while the service worker is terminated. This cycle can happen multiple times per second. This ensures that service workers do not consume too many resources and that the restart cycle is top-of-mind for developers. On the other hand, it also means that service workers do not have a persistent global state, so service workers should utilize data ste, such as IndexedDB, to hold a persistent state instead of using global variables.</p>
+
+<h2>Service worker registration</h2>
+
+<p>There are three methods you can use to register service workers:</p>
+
+<ul><li>Service worker registration using a service worker JavaScript API:</li>
+</ul><pre class="prettyprint"><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="str">'serviceWorker'</span><span class="pln"> </span><span class="kwd">in</span><span class="pln"> navigator</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    navigator</span><span class="pun">.</span><span class="pln">serviceWorker</span><span class="pun">.</span><span class="kwd">register</span><span class="pun">(</span><span class="str">'/app1/sw.js'</span><span class="pun">,</span><span class="pln"> </span><span class="pun">{</span><span class="pln">scope</span><span class="pun">:</span><span class="pln"> </span><span class="str">'/app1/'</span><span class="pun">})</span><span class="pln">
+        </span><span class="pun">.</span><span class="kwd">then</span><span class="pun">(</span><span class="kwd">function</span><span class="pln"> </span><span class="pun">(</span><span class="pln">registration</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+            console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="str">'Service worker registration succeeded with scope '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> registration</span><span class="pun">.</span><span class="pln">scope</span><span class="pun">);</span><span class="pln">
+        </span><span class="pun">})</span><span class="pln">
+        </span><span class="pun">.</span><span class="kwd">catch</span><span class="pun">(</span><span class="kwd">function</span><span class="pln"> </span><span class="pun">(</span><span class="pln">error</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+            console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="str">'Service worker registration failed: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> error</span><span class="pun">);</span><span class="pln">
+        </span><span class="pun">});</span><span class="pln">
+</span><span class="pun">}</span></pre>
+
+<ul><li>Service worker registration using a link element:<br><pre class="prettyprint"><span class="tag">&lt;link</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"/app1/sw.js"</span><span class="pln"> </span><span class="atn">rel</span><span class="pun">=</span><span class="atv">"serviceworker"</span><span class="pln"> </span><span class="atn">scope</span><span class="pun">=</span><span class="atv">"/app1/"</span><span class="pln"> </span><span class="tag">/&gt;</span></pre>
+    </li>
+</ul><ul><li>Service worker registration using a Link header field in server response:</li>
+</ul><pre class="prettyprint"><span class="typ">Link</span><span class="pun">:</span><span class="pln"> </span><span class="pun">&lt;</span><span class="str">/app1/</span><span class="pln">sw</span><span class="pun">.</span><span class="pln">js</span><span class="pun">&gt;</span><span class="pln"> rel</span><span class="pun">=</span><span class="str">"serviceworker"</span><span class="pun">;</span><span class="pln"> scope</span><span class="pun">=</span><span class="str">"/app1/"</span></pre>
+
+<p>The registration promise in the JavaScript API resolves once the service worker is successfully registered. If the service worker is already registered, the promise resolves instantly. That means that it is both safe and preferable to register a service worker on each and every page load.</p>
+
+<h2>Service worker installation</h2>
+
+<p>A service worker can add a listener for an install lifecycle event.</p>
+
+<pre class="prettyprint"><span class="kwd">self</span><span class="pun">.</span><span class="pln">addEventListener</span><span class="pun">(</span><span class="str">'install'</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">event</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="com">// ...</span><span class="pln">
+</span><span class="pun">});,/</span><span class="pln">pre</span><span class="pun">&gt;</span></pre>
+
+<p>It is safe to use new JavaScript features such as arrow functions in service worker scripts because all browsers that support service workers support those new JavaScript features as well.</p>
+
+<p>The event handler is called while the service worker is at the <em>installing</em> state, during which a previous service worker might still be <em>activated</em>. Therefore, the <em>install</em> lifecycle event handler should only perform nondestructive initialization steps, such as cache population, to avoid disturbing the currently activated service worker.</p>
+
+<p>The initialization steps are often asynchronous, so usually the service worker is not fully initialized when the <em>install</em> lifecycle event handler returns. The event handler can extend the lifetime of the event using the <em>waitUntil</em> method of the event to add a new extend lifetime promises to the event to prevent the service worker from reaching the <em>installed</em> state until all those promises resolve.</p>
+
+<p>By default, the service worker remains at the <em>installed</em> state while a previous service worker is still in use due to having clients. However, it is possible to ignore the existing clients, terminate the previous service worker, and advance activation by calling the <em>skipWaiting</em> method of the service worker while the <em>install</em> lifecycle event is being processed.</p>
+
+<h2>Service worker activation</h2>
+
+<p>A service worker also can add a listener for an activate lifecycle event.</p>
+
+<pre class="prettyprint"><span class="kwd">self</span><span class="pun">.</span><span class="pln">addEventListener</span><span class="pun">(</span><span class="str">'activate'</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">event</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="com">// ...</span><span class="pln">
+</span><span class="pun">});</span></pre>
+
+<p>The event handler is called while the service worker is at the <em>activating</em> state, during which all previous service workers are already terminated and are made <em>redundant</em> or are about to be made <em>redundant</em>. Therefore, the <em>activate</em> lifecycle event handler can do also destructive initialization steps, such as database schema updates and cache purges.</p>
+
+<p>Once again, to prevent the service worker from reaching the <em>activated</em> state too early, the event handler can extend the lifetime of the event using the <em>waitUntil</em> method of the event to add a new promise to the extend lifetime promises of event and hence delay the <em>activated</em> state until all those promises resolve.</p>
+
+<p>The <em>activated</em> service worker does not control all existing clients and receive functional events by default, but only after navigation or reload. However, it is possible to force the <em>activated</em> service worker to take control of all existing clients instantly by calling the <em>clients.claim</em> method of the service worker while the <em>activate</em> lifecycle event is being processed.</p>
+
+<h2>Functional and message events</h2>
+
+<p>Once a service worker is <em>activated</em>, it is ready to receive function events (such as <em>fetch</em>, <em>foreignfetch</em>, and <em>sync</em> events) and message events. The <em>fetch<em> and </em>foreignfetch</em> events are generated by page navigation and subresource requests and allow the service worker to act as a programmable proxy. The <em>message</em> events are generated by the <em>postMessage</em> interface and allow direct communication between a web page and its controlling service worker.</p>
+
+<p>Only the <em>fetch</em>, <em>foreignfetch</em>, and <em>message</em> events are defined in the service worker specification. However, as functional events provide a useful framework to build on, other specifications define other functional events. For instance, the background synchronization specification defines the <em>sync</em> events which are used for delayed background synchronization.</p>
+
+<h2>A service worker as a programmable proxy</h2>
+
+<p>When a service worker is used as programmable proxy, the main duty of the <em>install</em> lifecycle event handler is to populate a cache with core resources.</p>
+
+<pre class="prettyprint"><span class="kwd">const</span><span class="pln"> CACHE_VERSION </span><span class="pun">=</span><span class="pln"> </span><span class="str">'v2'</span><span class="pun">;</span><span class="pln">
+</span><span class="kwd">self</span><span class="pun">.</span><span class="pln">addEventListener</span><span class="pun">(</span><span class="str">'install'</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">event</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="com">// Prefetching.</span><span class="pln">
+    </span><span class="kwd">event</span><span class="pun">.</span><span class="pln">waitUntil</span><span class="pun">(</span><span class="pln">
+        </span><span class="com">// Open a cache for resources.</span><span class="pln">
+        caches</span><span class="pun">.</span><span class="pln">open</span><span class="pun">(</span><span class="pln">CACHE_VERSION</span><span class="pun">)</span><span class="pln">
+            </span><span class="pun">.</span><span class="kwd">then</span><span class="pun">(</span><span class="pln">cache </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+                </span><span class="com">// Begin fetching the resources.</span><span class="pln">
+                </span><span class="com">// The returned promise resolve only when all</span><span class="pln">
+                </span><span class="com">// of them are fetched and cached.</span><span class="pln">
+                </span><span class="kwd">return</span><span class="pln"> cache</span><span class="pun">.</span><span class="pln">addAll</span><span class="pun">([</span><span class="pln">
+                    </span><span class="str">'/app1/index.html'</span><span class="pun">,</span><span class="pln">
+                    </span><span class="str">'/app1/resources/v2/background.png'</span><span class="pun">,</span><span class="pln">
+                    </span><span class="str">'/app1/resources/v2/fallback.png'</span><span class="pun">,</span><span class="pln">
+                    </span><span class="str">'/app1/resources/v2/script.js'</span><span class="pun">,</span><span class="pln">
+                    </span><span class="str">'/app1/resources/v2/style.css'</span><span class="pln">
+                </span><span class="pun">]);</span><span class="pln">
+            </span><span class="pun">})</span><span class="pln">
+            </span><span class="pun">.</span><span class="kwd">then</span><span class="pun">(()</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+                </span><span class="com">// Optional. Now that all previous tasks are</span><span class="pln">
+                </span><span class="com">// done, advance to activation immediately.</span><span class="pln">
+                </span><span class="kwd">return</span><span class="pln"> </span><span class="kwd">self</span><span class="pun">.</span><span class="pln">skipWaiting</span><span class="pun">();</span><span class="pln">
+            </span><span class="pun">});</span><span class="pln">
+    </span><span class="pun">);</span><span class="pln">
+</span><span class="pun">});</span></pre>
+
+<p>The main duty of the <em>activate</em> lifecycle event handler is to purge old cached resources that are not being used any more. It is important to do this because otherwise at some point the browser will determine that the origin is using too much cache resources and will purge the entire cache. By purging the cache early, the service worker can do selective purging.</p>
+
+<pre class="prettyprint"><span class="kwd">self</span><span class="pun">.</span><span class="pln">addEventListener</span><span class="pun">(</span><span class="str">'activate'</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">event</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">event</span><span class="pun">.</span><span class="pln">waitUntil</span><span class="pun">(</span><span class="pln">
+        </span><span class="com">// Purge old cache versions.</span><span class="pln">
+        caches</span><span class="pun">.</span><span class="pln">keys</span><span class="pun">()</span><span class="pln">
+            </span><span class="pun">.</span><span class="kwd">then</span><span class="pun">(</span><span class="pln">keys </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="typ">Promise</span><span class="pun">.</span><span class="pln">all</span><span class="pun">(</span><span class="pln">keys</span><span class="pun">.</span><span class="pln">map</span><span class="pun">(</span><span class="pln">key </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+                </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">key </span><span class="pun">!=</span><span class="pln"> CACHE_VERSION</span><span class="pun">)</span><span class="pln">
+                    </span><span class="kwd">return</span><span class="pln"> caches</span><span class="pun">.</span><span class="kwd">delete</span><span class="pun">(</span><span class="pln">key</span><span class="pun">);</span><span class="pln">
+            </span><span class="pun">})))</span><span class="pln">
+            </span><span class="pun">.</span><span class="kwd">then</span><span class="pun">(()</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+                </span><span class="com">// Optional. Now that all previous tasks are</span><span class="pln">
+                </span><span class="com">// done, take control of all existing clients.</span><span class="pln">
+                </span><span class="kwd">return</span><span class="pln"> </span><span class="kwd">self</span><span class="pun">.</span><span class="pln">clients</span><span class="pun">.</span><span class="pln">claim</span><span class="pun">();</span><span class="pln">
+            </span><span class="pun">});</span><span class="pln">
+    </span><span class="pun">);</span><span class="pln">
+</span><span class="pun">});</span></pre>
+
+<p>The <em>fetch</em> event handler does the proxying. The example code does unconditional caching and falls back to fetching from a server first and then to a fallback response.</p>
+
+<pre class="prettyprint"><span class="kwd">self</span><span class="pun">.</span><span class="pln">addEventListener</span><span class="pun">(</span><span class="str">'fetch'</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">event</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="com">// Unconditional caching.</span><span class="pln">
+    </span><span class="kwd">event</span><span class="pun">.</span><span class="pln">respondWith</span><span class="pun">(</span><span class="pln">
+        caches</span><span class="pun">.</span><span class="pln">match</span><span class="pun">(</span><span class="kwd">event</span><span class="pun">.</span><span class="pln">request</span><span class="pun">).</span><span class="kwd">then</span><span class="pun">(</span><span class="kwd">function</span><span class="pun">(</span><span class="pln">response</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+            </span><span class="kwd">return</span><span class="pln"> response </span><span class="pun">||</span><span class="pln"> fetch</span><span class="pun">(</span><span class="kwd">event</span><span class="pun">.</span><span class="pln">request</span><span class="pun">)</span><span class="pln">
+                </span><span class="pun">.</span><span class="kwd">then</span><span class="pun">(</span><span class="pln">response </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+                    </span><span class="com">// Open a cache for resources.</span><span class="pln">
+                    caches</span><span class="pun">.</span><span class="pln">open</span><span class="pun">(</span><span class="pln">CACHE_VERSION</span><span class="pun">).</span><span class="kwd">then</span><span class="pun">(</span><span class="pln">cache </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+                        </span><span class="com">// Cache the response.</span><span class="pln">
+                        cache</span><span class="pun">.</span><span class="pln">put</span><span class="pun">(</span><span class="kwd">event</span><span class="pun">.</span><span class="pln">request</span><span class="pun">,</span><span class="pln"> response</span><span class="pun">);</span><span class="pln">
+                    </span><span class="pun">});</span><span class="pln">
+                    </span><span class="com">// Return the response.</span><span class="pln">
+                    </span><span class="kwd">return</span><span class="pln"> response</span><span class="pun">.</span><span class="pln">clone</span><span class="pun">();</span><span class="pln">
+                </span><span class="pun">})</span><span class="pln">
+                </span><span class="pun">.</span><span class="kwd">catch</span><span class="pun">(()</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+                    </span><span class="com">// Return a fallback response.</span><span class="pln">
+                    </span><span class="kwd">return</span><span class="pln"> caches</span><span class="pun">.</span><span class="pln">match</span><span class="pun">(</span><span class="str">'/app1/resources/v2/fallback.png'</span><span class="pun">);</span><span class="pln">
+                </span><span class="pun">});</span><span class="pln">
+        </span><span class="pun">);</span><span class="pln">
+    </span><span class="pun">);</span><span class="pln">
+</span><span class="pun">});</span></pre>
+
+<p>This kind of prefetching and unconditional caching can be implemented using a cache manifest. However, the power of <em>fetch</em> events lies with programmability. The event handler can examine the properties of requests (such as the URL and the request and response header fields) and act differently in the case of different request types. For example, the service worker could prefer cached responses and fall back to fetched ones for some requests, prefer fetched responses and fall back to cached ones for some other requests, and use load balancing for yet other requests.</p>
+
+<h2>Issues with proxying service workers and possible solutions</h2>
+
+<p>Service workers may utilize local caches, which can make repeated resource loadings much faster. However, the same does not usually hold when caches are cold during initially load resources. There are actually two issues here.</p>
+
+<p>One issue is that because code evaluation takes time, programmability inevitably causes a delay. One solution flying around to solve this problem is using static routes, which allows service workers to declare that certain resource requests are always handled in the same simple way. It might be possible to cover the most common cases with just a few chained models. This would allow service workers to use declarative routes for most resources and to use <em>fetch</em> event handlers only for the most complex resource requests. However, because this issue hasn’t been extensively studied and we believe this issue is usually fairly minor, this solution has not been worked on.</p>
+
+<p>The other issue is caused by the fact that <em>fetch</em> event queue handling is not parallelized although (properly) implemented <em>fetch</em> event handlers are asynchronous. A typical web browser uses multiple connections and threads to fetch network resources. However, with service workers, a single service worker acts as the gatekeeper for these fetches and can become a bottleneck. The solution we’re discussing to solve this problem, is to have <em>fetch</em> events be handled in multiple threads in parallel. This discussion is ongoing, but we will likely implement this solution in the near future.</p>
+
+<h2>Summary</h2>
+
+<p>Service workers have bought the set of execution contexts available to web applications closer to those of native applications. Service workers have allowed web applications to locally run part of their functionality that has traditionally been able to run only on remote servers. This has narrowed the feature and performance gap between web and native applications. However, more complementary standards are needed before web and native applications become indistinguishable.</p>
+
+<p>Service workers are essential for Progressive Web Apps. Service workers provide connectivity independence by allowing apps to work offline and to handle errors caused by low quality networks. They ensure freshness of apps by allowing apps to use service worker update process and they contribute to discoverability of apps along Web App Manifest, too.</p>
+</div></div></div>  </div>
+</div>
+  </div>
+                                                          </div>
+          </div>
+              </div>
+    </main>
+    <!-- END MAIN -->
+
+    <footer>
+      <div class="container">
+        <div class="mobile-menu"></div>
+        <div id="footer-menu">
+          <ul class="navbar-menu"><li class="menu-778 first"><a href="https://01.org/about/privacy-policy" title="">Privacy Policy</a></li>
+<li class="menu-779"><a href="https://www.intel.com/content/www/us/en/legal/terms-of-use.html">Terms of Service</a></li>
+<li class="menu-780"><a href="https://01.org/about/contact-us" title="">Contact Us</a></li>
+<li class="menu-5163"><a href="http://www.intel.com/content/www/us/en/jobs/jobs-at-intel.html" target="_blank">Jobs</a></li>
+<li class="menu-5189"><a href="http://www.intel.com/content/www/us/en/legal/trademarks.html" target="_blank">*Trademarks</a></li>
+<li class="menu-5190 last"><a href="http://www.intel.com/content/www/us/en/privacy/intel-cookie-notice.html" target="_blank">Cookies</a></li>
+</ul>        </div>
+        <div class="social-bar">
+          <div class="container">
+              <div class="region region-social-media">
+      <div class="region region-social-media">
+    <div id="block-menu-menu-social-media" class="block block-menu">
+
+    
+  <div class="content">
+    <ul class="custom-nav"><li class="first leaf"><a href="https://www.facebook.com/IntelDeveloperZone" title="Intel Developer Zone | Facebook" id="social-media-icon-facebook" name="Intel Developer Zone | Facebook" class="tool-icon" target="_blank">Facebook</a></li>
+<li class="leaf"><a href="https://plus.google.com/+IntelSoftware/posts" title="Intel Opensource | Google Plus" id="social-media-icon-gplus" name="Intel Opensource | Google Plus" class="tool-icon" target="_blank">Google-plus</a></li>
+<li class="leaf"><a href="https://twitter.com/intelsoftware" title="Intel Opensource | Twitter" id="social-media-icon-twitter" name="Intel Opensource | Twitter" class="tool-icon" target="_blank">Twitter</a></li>
+<li class="leaf"><a href="https://www.linkedin.com/grp/home?gid=3078126" title="Intel Developer Zone | LinkedIn" id="social-media-icon-linkedin" name="Intel Developer Zone | LinkedIn" class="tool-icon" target="_blank">Linkedin</a></li>
+<li class="leaf"><a href="https://www.youtube.com/user/intelswnetwork" title="Intel Network | YouTube" id="social-media-icon-youtube" name="Intel Network | YouTube" class="tool-icon" target="_blank">Youtube</a></li>
+<li class="last leaf"><a href="https://github.com/01org" title="01.org | GitHub" id="social-media-icon-github" name="01.org | GitHub" class="tool-icon" target="_blank">Github</a></li>
+</ul>  </div>
+</div>
+  </div>
+  </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+          <small>Copyright © 2019 Intel Corporation. All rights reserved</small> <br>
+          <small>*Other names and brands may be claimed as the property of others</small>
+                  </div>
+      </div>
+    </footer>
+  </div>
+</div>
+
+<!-- Mobile menu -->
+<nav id="c-menu--slide-left" class="c-menu c-menu--slide-left">
+  <button class="c-menu__close">Close Menu →</button>
+  <ul class="navbar-menu" id="primary-menu"><li class="menu-760 active-trail first" data-submenu="projects_submenu"><a href="https://01.org/projects" class="active-trail">Projects<span class="hexagon">01</span><span class="arrow-up"></span></a><div class="submenu-container clearfix" id="projects_submenu"><div class="view view-projects view-id-projects view-display-id-block_top_projects_submenu col1 view-dom-id-16bc634730b3bcd537d45a41847964f1">
+            <div class="view-header">
+      <h4 class="submenu-title">Top Projects</h4>
+    </div>
+  
+  
+  
+      <div class="view-content">
+          <ul>          <li class="">  
+          <a href="https://01.org/celadon">Celadon</a>  </li>
+          <li class="">  
+          <a href="https://01.org/openstack">OpenStack* on Intel® Architecture</a>  </li>
+          <li class="">  
+          <a href="https://01.org/linuxgraphics">Intel® Graphics for Linux*</a>  </li>
+      </ul>    </div>
+  
+  
+  
+  
+  
+  
+</div><div class="view view-projects view-id-projects view-display-id-block_project_categories col2 view-dom-id-8e5781f7a4133824faddcfa68a547adc">
+            <div class="view-header">
+      <h4 class="submenu-title">Projects by type</h4>
+    </div>
+  
+  
+  
+      <div class="view-content">
+          <ul>          <li class="">  
+          <a href="https://01.org/projects?keys=&amp;field_project_taxonomy_tid=693">Analytics</a>  </li>
+          <li class="">  
+          <a href="https://01.org/projects?keys=&amp;field_project_taxonomy_tid=915">Archive</a>  </li>
+          <li class="">  
+          <a href="https://01.org/projects?keys=&amp;field_project_taxonomy_tid=757">Autonomous Systems</a>  </li>
+          <li class="">  
+          <a href="https://01.org/projects?keys=&amp;field_project_taxonomy_tid=77">Cloud Computing &amp; Virtualization</a>  </li>
+          <li class="">  
+          <a href="https://01.org/projects?keys=&amp;field_project_taxonomy_tid=78">Communications &amp; Connectivity</a>  </li>
+          <li class="">  
+          <a href="https://01.org/projects?keys=&amp;field_project_taxonomy_tid=79">Developer Toolkits</a>  </li>
+          <li class="">  
+          <a href="https://01.org/projects?keys=&amp;field_project_taxonomy_tid=80">Embedded</a>  </li>
+          <li class="">  
+          <a href="https://01.org/projects?keys=&amp;field_project_taxonomy_tid=81">Graphics &amp; Visualization</a>  </li>
+          <li class="">  
+          <a href="https://01.org/projects?keys=&amp;field_project_taxonomy_tid=83">Operating Systems</a>  </li>
+          <li class="">  
+          <a href="https://01.org/projects?keys=&amp;field_project_taxonomy_tid=84">Power &amp; Performance Optimization</a>  </li>
+          <li class="">  
+          <a href="https://01.org/projects?keys=&amp;field_project_taxonomy_tid=82">System and Resource Management</a>  </li>
+          <li class="">  
+          <a href="https://01.org/projects?keys=&amp;field_project_taxonomy_tid=840">Technologies</a>  </li>
+          <li class="">  
+          <a href="https://01.org/projects?keys=&amp;field_project_taxonomy_tid=85">User Experience &amp; Applications</a>  </li>
+          <li class="">  
+          <a href="https://01.org/projects?keys=&amp;field_project_taxonomy_tid=76">Web Platform</a>  </li>
+      </ul>    </div>
+  
+  
+  
+  
+  
+  
+</div></div></li>
+<li class="menu-539"><a href="https://01.org/community">Community<span class="hexagon">01</span></a></li>
+<li class="menu-761"><a href="https://01.org/about">About<span class="hexagon">01</span></a></li>
+<li class="menu-11082 last"><a href="https://01.org/security">Security</a></li>
+</ul>  <ul class="navbar-menu" id="secondary-menu"><li class="menu-6751 first" data-submenu="community_submenu"><a href="https://01.org/community">Contribute<span class="fa fa-caret-down"></span></a><div class="submenu-container clearfix" id="community_submenu"><ul><li><h4>Websites</h4><p>To provide more information about a Project, an external dedicated Website is created. This establishes a clear link between 01 and the project, and help to have a stronger presence in all Internet.</p><a href="https://01.org/community/contribution-tools?qt-projects_aggregated_links=0#qt-projects_aggregated_links" class="see-all">See all</a></li><li><h4>Mailing list</h4><p>A mailing list improves communication for all the people interested in a 01.org Project: developers, final users and contributors. A more direct channel to solve your questions and help others to get involved.</p><a href="https://01.org/community/contribution-tools?qt-projects_aggregated_links=1#qt-projects_aggregated_links" class="see-all">See all</a></li><li><h4>Github Repos</h4><p>Github repositories are the most preferred way to store and share a Project's source files for its easy way to navigate repos. Click here to find and download 01.org Projects' files!</p><a href="https://01.org/community/contribution-tools?qt-projects_aggregated_links=2#qt-projects_aggregated_links" class="see-all">See all</a></li><li><h4>Bug Tracking</h4><p>Bug tracking allows the developers to have a record of the bugs and issues found in an application for a more efficient way to fix them.</p><a href="https://01.org/community/contribution-tools?qt-projects_aggregated_links=3#qt-projects_aggregated_links" class="see-all">See all</a></li><li><h4>IRC</h4><p>This is another way to interact with the developers of a Project, solve your questions or contribute to improve it: IRC channels.</p><a href="https://01.org/community/contribution-tools?qt-projects_aggregated_links=4#qt-projects_aggregated_links" class="see-all">See all</a></li><li><h4>Other</h4><p>Here's the place to find additional information about that Project. Could be more repos, external blogs or other websites related to the Project.</p><a href="https://01.org/community/contribution-tools?qt-projects_aggregated_links=5#qt-projects_aggregated_links" class="see-all">See all</a></li></ul></div></li>
+<li class="menu-6757 last"><a href="https://intel.com/jobs">Jobs</a></li>
+</ul></nav><!-- /mobile menu -->
+
+<div id="c-mask" class="c-mask"></div>
+  
+
+</div><div id="cboxOverlay" style="display: none;"></div><div id="colorbox" class="" role="dialog" tabindex="-1" style="display: none;"><div id="cboxWrapper"><div><div id="cboxTopLeft" style="float: left;"></div><div id="cboxTopCenter" style="float: left;"></div><div id="cboxTopRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxMiddleLeft" style="float: left;"></div><div id="cboxContent" style="float: left;"><div id="cboxTitle" style="float: left;"></div><div id="cboxCurrent" style="float: left;"></div><button type="button" id="cboxPrevious"></button><button type="button" id="cboxNext"></button><button id="cboxSlideshow"></button><div id="cboxLoadingOverlay" style="float: left;"></div><div id="cboxLoadingGraphic" style="float: left;"></div></div><div id="cboxMiddleRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxBottomLeft" style="float: left;"></div><div id="cboxBottomCenter" style="float: left;"></div><div id="cboxBottomRight" style="float: left;"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; display: none;"></div></div><div class="hiddendiv common"></div><iframe src="./Web fundamentals_ Service workers _ 01.org_files/portal.html" id="st_gdpr_iframe" style="width: 0px; height: 0px; position: absolute; left: -5000px;"></iframe><div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div><iframe name="fb_xdm_frame_https" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="./Web fundamentals_ Service workers _ 01.org_files/vy-MhgbfL4v.html" style="border: none;"></iframe></div><div></div></div></div><div id="stcpDiv" style="position: absolute; top: -1999px; left: -1988px;">Web fundamentals: Service workersWEB FUNDAMENTALS: SERVICE WORKERS</div><div id="stwrapper" class="stwrapper stwrapper5x" style="display: none;"><iframe allowtransparency="true" id="stLframe" class="stLframe" name="stLframe" frameborder="0" scrolling="no" src="./Web fundamentals_ Service workers _ 01.org_files/index.html"></iframe></div><div id="stOverlay" onclick="javascript:stWidget.closeWidget();"></div><div id="gtx-trans" style="position: absolute; left: 16px; top: 582px;"><div class="gtx-trans-icon"></div></div></body></html>
