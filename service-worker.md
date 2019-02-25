@@ -85,7 +85,7 @@ Service Worker 的功能很强大，因此需要有对应的安全限制来防�
 
   > singsong: Service Worker 脚本文件的地址是相对于 origin，而不是 app 的根目录。
   
-  假如有个商城平台：www.mall.com，并且允许第三方商家站点入驻。现在有两个商家(假如：huawei、mi)入驻：`www.mall.com/huawei`，`www.mall.com/mi`。假如商家 huawei 上传 Service Worker 到它站点（`www.mall.com/huawei/sw.js`）。浏览器如果没有对 Service Worker 作用范围做限制，`/huawei/sw.js` 就可以控制商家 mi 的流量导向，甚至 `www.mall.com` 的流量导向。为了避免类似情况发生，浏览器会对 Service Worker 作用范围做限制。Service Worker 只对所在目录和子目录有影响。这里我们可以通过浏览器提供的`scope`选项指定：
+  假如有个商城平台：`www.mall.com`，并且允许第三方商家站点入驻。现在有两个商家(假如：huawei、mi)入驻：`www.mall.com/huawei`，`www.mall.com/mi`。假如商家 huawei 上传 Service Worker 到它站点（`www.mall.com/huawei/sw.js`）。浏览器如果没有对 Service Worker 作用范围做限制，`/huawei/sw.js` 就可以控制商家 mi 的流量导向，甚至 `www.mall.com` 的流量导向。为了避免类似情况发生，浏览器会对 Service Worker 作用范围做限制。Service Worker 只对所在目录和子目录有影响。这里我们可以通过浏览器提供的`scope`选项指定：
 
   ```js
   // 作用范围一样。即如果不指定scope，默认为sw.js所在目录
