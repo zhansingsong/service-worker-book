@@ -1,4 +1,4 @@
-[![PWA](./images/PWA.png)
+![PWA](./images/PWA.png)
 
 一直以来，web app 想要做到与 native app 一样的用户体验。其中一个最重要的技术难道题是离线支持（离线状态下，也能访问页面）。虽然之前浏览器提供 [AppCache](https://developer.mozilla.org/en-US/docs/Web/HTML/Using_the_application_cache) 来支持离线访问。但 AppCache 在开发过程中暴露一些缺陷：
 
