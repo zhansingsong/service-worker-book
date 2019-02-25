@@ -369,7 +369,7 @@ self.addEventListener('message', (event) => {
 
 Service Worker 规范定义了两个缓存相关的 API：
 
-- [CacheStorage]([CacheStorage](https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage))
+- [CacheStorage](https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage)
 - [Cache](https://developer.mozilla.org/en-US/docs/Web/API/Cache)
 
 在 Service Worker 中做持久化时，常会使用这个两个接口。为了方便理解，这里以 [mongoDB](https://www.mongodb.com/) 做个类比：
