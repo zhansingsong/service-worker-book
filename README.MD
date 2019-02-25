@@ -8,5 +8,5 @@
 
 - [Service Worker](./service-worker.md)
 - [Service Worker 实战](./in-action.md)
-- [如果在实际项目中使用 Service Worker](./in-action-project.md)
+- [如何在实际项目中使用 Service Worker](./in-action-project.md)
 - ……开发中……
